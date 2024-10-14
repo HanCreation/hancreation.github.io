@@ -36,7 +36,7 @@ const EducationExperience: React.FC = () => {
                 <div className="bg-[#22333D] rounded-lg p-6">
                   <h3 className="text-2xl font-bold mb-2">Creative & Design Activist</h3>
                   <p className="text-[#C6AC8E] mb-2">2023 - Present</p>
-                  <p className="text-sm">HIMTI BINUS</p>
+                  <p className="text-sm">Himpunan Mahasiswa Teknik Informatika (HIMTI) - BINUS UNIVERSITY</p>
                 </div>
                 <div className="bg-[#22333D] rounded-lg p-6">
                   <h3 className="text-2xl font-bold mb-2">Design & Documentation Division</h3>
