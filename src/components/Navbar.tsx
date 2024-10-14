@@ -112,7 +112,7 @@ const Navbar: React.FC = () => {
               </button>
             ))}
             <a
-              href="ATS-CV-Dean_Hans.pdf"
+              href="ATS-CV-Dean Hans.pdf"
               download
               className="bg-[#C6AC8E] text-[#1D1D1D] px-6 py-2 rounded-full font-semibold hover:bg-[#EAE0D5] transition-colors"
             >
