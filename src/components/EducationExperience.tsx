@@ -32,6 +32,7 @@ const EducationExperience: React.FC = () => {
                   <h3 className="text-2xl font-bold mb-2">Scholarship Student Mentor</h3>
                   <p className="text-[#C6AC8E] mb-2">2024 - Present</p>
                   <p className="text-sm">SASC Binus University Alam Sutera, Tangerang</p>
+                  {/* <p></p> */}
                 </div>
                 <div className="bg-[#22333D] rounded-lg p-6">
                   <h3 className="text-2xl font-bold mb-2">Creative & Design Activist</h3>

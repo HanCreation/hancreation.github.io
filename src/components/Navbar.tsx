@@ -84,9 +84,13 @@ const Navbar: React.FC = () => {
                 </button>
               ))}
             </div>
-            <button className="bg-[#C6AC8E] text-[#1D1D1D] px-6 py-2 rounded-full font-semibold hover:bg-[#EAE0D5] transition-colors">
+            <a
+              href="/ATS-CV-Dean_Hans.pdf"
+              download
+              className="bg-[#C6AC8E] text-[#1D1D1D] px-6 py-2 rounded-full font-semibold hover:bg-[#EAE0D5] transition-colors"
+            >
               Download CV
-            </button>
+            </a>
           </div>
           <div className="md:hidden">
             <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -108,7 +112,7 @@ const Navbar: React.FC = () => {
               </button>
             ))}
             <a
-              href="CV - Dean Hans-1.pdf"
+              href="/ATS-CV-Dean_Hans.pdf"
               download
               className="bg-[#C6AC8E] text-[#1D1D1D] px-6 py-2 rounded-full font-semibold hover:bg-[#EAE0D5] transition-colors"
             >
