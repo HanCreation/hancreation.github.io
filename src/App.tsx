@@ -14,7 +14,7 @@ function App() {
         <Navbar />
         <EducationExperience />
         <SkillsAndProjects />
-        <Section id="certifications" title="Certificates, Courses, and Webinar Attended" />
+        <Section title="Certificates, Courses, and Webinar Attended" />
       </div>
     </ParallaxProvider>
   );

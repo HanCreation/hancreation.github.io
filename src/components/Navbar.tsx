@@ -13,16 +13,16 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const sections = [
-        { id: 'education-experience', name: 'Education & Experience' },
-        { id: 'skills-and-projects', name: 'Skills & Projects' },
-        { id: 'certifications', name: 'Certificates, Courses, and Webinar Attended' },
+        { id: 'edu', name: 'Education & Experience' },
+        { id: 'skill', name: 'Skills & Projects' },
+        { id: 'cert', name: 'Certificates, Courses, and Webinar Attended' },
       ];
 
-      const currentSection = sections.find(section => {
+      const currentSection = sections.find((section) => {
         const element = document.getElementById(section.id);
         if (element) {
           const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
+          return rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
         }
         return false;
       });
@@ -35,9 +35,9 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navItems = [
-    'Education & Experience',
-    'Skills & Projects',
-    'Certificates, Courses, and Webinar Attended'
+    { id: 'edu', name: 'Education & Experience' },
+    { id: 'skill', name: 'Skills & Projects' },
+    { id: 'cert', name: 'Certificates, Courses, and Webinar Attended' },
   ];
 
   const getNavItemClass = (item: string) => {
@@ -55,8 +55,9 @@ const Navbar: React.FC = () => {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth"
+        behavior: 'smooth',
       });
+      setActiveSection(navItems.find(item => item.id === sectionId)?.name || '');
     }
     setIsMenuOpen(false);
   };
@@ -69,18 +70,20 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <a href="#" className="text-2xl font-bold">
-            <img src="/path-to-your-logo.png" alt="DHS" className="h-8" />
+            <img src="/Han Creation Logo 2021 transparent.png" alt="DHS" className="h-8 w-auto mr-10" />
           </a>
-          <div className="hidden md:flex items-center space-x-6">
-            {navItems.map((item) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(item.toLowerCase().replace(/ & /g, '-').replace(/, /g, '-'))}
-                className={getNavItemClass(item)}
-              >
-                {item}
-              </button>
-            ))}
+          <div className="hidden md:flex items-center w-full justify-between">
+            <div className="flex items-center space-x-6">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className={getNavItemClass(item.name)}
+                >
+                  {item.name}
+                </button>
+              ))}
+            </div>
             <button className="bg-[#C6AC8E] text-[#1D1D1D] px-6 py-2 rounded-full font-semibold hover:bg-[#EAE0D5] transition-colors">
               Download CV
             </button>
@@ -97,11 +100,11 @@ const Navbar: React.FC = () => {
           <div className="container mx-auto px-4 flex flex-col space-y-4">
             {navItems.map((item) => (
               <button
-                key={item}
-                onClick={() => scrollToSection(item.toLowerCase().replace(/ & /g, '-').replace(/, /g, '-'))}
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
                 className="hover:text-[#C6AC8E] transition-colors"
               >
-                {item}
+                {item.name}
               </button>
             ))}
             <button className="bg-[#C6AC8E] text-[#1D1D1D] px-6 py-2 rounded-full font-semibold hover:bg-[#EAE0D5] transition-colors">
