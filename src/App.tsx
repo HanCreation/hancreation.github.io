@@ -1,35 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { ParallaxProvider } from 'react-scroll-parallax';
+import Hero from './components/Hero';
+import Navbar from './components/Navbar';
+import EducationExperience from './components/EducationExperience';
+import SkillsAndProjects from './components/SkillsAndProjects';
+import Section from './components/Section';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <ParallaxProvider>
+      <div className="min-h-screen bg-[#1D1D1D] text-[#EAE0D5]">
+        <Hero />
+        <Navbar />
+        <EducationExperience />
+        <SkillsAndProjects />
+        <Section id="certifications" title="Certificates, Courses, and Webinar Attended" />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </ParallaxProvider>
+  );
 }
 
-export default App
+export default App;
