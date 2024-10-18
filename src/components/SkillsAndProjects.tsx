@@ -108,7 +108,7 @@ const SkillsAndProjects: React.FC = () => {
                         {project.skills.map((skill, skillIndex) => (
                           <span
                             key={skillIndex}
-                            className="bg-[#1D1D1D] text-[#C6AC8E] px-2 py-1 rounded text-xs"
+                            className="bg-black text-[#C6AC8E] px-2 py-1 rounded text-xs"
                           >
                             {skill}
                           </span>
