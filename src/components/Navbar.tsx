@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
     const handleScroll = () => {
       const sections = [
         { id: 'edu', name: 'Education & Experience' },
-        { id: 'skill', name: 'Skills & Projects' },
+        { id: 'skill', name: 'Tools, Skills, & Projects' },
         { id: 'cert', name: 'Certificates, Courses, and Webinar Attended' },
       ];
 
@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
 
   const navItems = [
     { id: 'edu', name: 'Education & Experience' },
-    { id: 'skill', name: 'Skills & Projects' },
+    { id: 'skill', name: 'Tools, Skills, & Projects' },
     { id: 'cert', name: 'Certificates, Courses, and Webinar Attended' },
   ];
 
@@ -87,7 +87,7 @@ const Navbar: React.FC = () => {
             <a
               href="/ATS-CV-Dean_Hans.pdf"
               download
-              className="bg-[#C6AC8E] text-[#1D1D1D] px-6 py-2 rounded-full font-semibold hover:bg-[#EAE0D5] transition-colors"
+              className="bg-[#C6AC8E] text-[#1D1D1D] px-6 py-2 rounded-full font-semibold hover:bg-[#EAE0D5] transition-colors text-center"
             >
               Download CV
             </a>
@@ -114,7 +114,7 @@ const Navbar: React.FC = () => {
             <a
               href="ATS-CV-Dean_Hans.pdf"
               download
-              className="bg-[#C6AC8E] text-[#1D1D1D] px-6 py-2 rounded-full font-semibold hover:bg-[#EAE0D5] transition-colors"
+              className="bg-[#C6AC8E] text-[#1D1D1D] px-6 py-2 rounded-full font-semibold hover:bg-[#EAE0D5] transition-colors text-center"
             >
               Download CV
             </a>

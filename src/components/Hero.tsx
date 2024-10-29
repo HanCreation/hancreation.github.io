@@ -48,6 +48,16 @@ const Hero: React.FC = () => {
             <a href="mailto:hans.dean@yahoo.com" className="text-[#C6AC8E] hover:text-[#EAE0D5] transition-colors" title="Email">
               <Mail size={24} />
             </a>
+            
+          </div>
+          <div>
+            <a
+              href="/ATS-CV-Dean_Hans.pdf"
+              download
+              className="bg-[#C6AC8E] text-[#1D1D1D] px-6 py-2 rounded-full font-semibold hover:bg-[#EAE0D5] transition-colors text-center"
+            >
+              Download CV
+            </a>
           </div>
         </div>
       </div>

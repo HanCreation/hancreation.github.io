@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import { useInView } from 'react-intersection-observer';
 import { ExternalLink } from 'lucide-react';
+import SkillsAndTools from './SkillAndTools';
 
 interface Project {
   title: string;
@@ -77,13 +78,16 @@ const SkillsAndProjects: React.FC = () => {
   return (
     <Parallax speed={5}>
       <section id="skill" className="py-20">
+        <div>
+        <SkillsAndTools />
+        </div>
         <div className="container mx-auto px-4">
           <div
             ref={ref}
             className={`space-y-20 ${inView ? 'fade-in is-visible' : 'fade-in'}`}
           >
             <div className="skills">
-              <h2 className="text-4xl font-bold mb-8 text-center">Skills Gained from Projects</h2>
+              <h2 className="text-4xl font-bold mb-8 text-center">Skills Gained and Tools Used from Projects</h2>
               <div className="flex flex-wrap justify-center gap-4">
                 {uniqueSkills.map((skill, index) => (
                   <span
