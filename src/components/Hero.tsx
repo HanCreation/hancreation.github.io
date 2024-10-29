@@ -1,7 +1,7 @@
 import React from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import { useInView } from 'react-intersection-observer';
-import { Github, Linkedin, Mail, Smile } from 'lucide-react';
+import { Github, Linkedin, Mail} from 'lucide-react';
 
 const Hero: React.FC = () => {
   const [ref, inView] = useInView({
