@@ -1,7 +1,7 @@
-import React from 'react';
-import { Parallax } from 'react-scroll-parallax';
-import { useInView } from 'react-intersection-observer';
-import { Github, Linkedin, Mail} from 'lucide-react';
+import React from "react";
+import { Parallax } from "react-scroll-parallax";
+import { useInView } from "react-intersection-observer";
+import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
 
 const Hero: React.FC = () => {
   const [ref, inView] = useInView({
@@ -15,13 +15,17 @@ const Hero: React.FC = () => {
         <img
           src="Han Creation 2021 Inverted Transparent .png"
           alt="Logo Han Creation"
-          className={`w-auto h-12 transition-opacity duration-1000 ${inView ? 'opacity-100' : 'opacity-0'}`}
+          className={`w-auto h-12 transition-opacity duration-1000 ${
+            inView ? "opacity-100" : "opacity-0"
+          }`}
         />
       </div>
       <div className="parallax-content">
         <div
           ref={ref}
-          className={`text-center space-y-6 transition-opacity duration-1000 delay-200 ${inView ? 'opacity-100' : 'opacity-0'}`}
+          className={`text-center space-y-6 transition-opacity duration-1000 delay-200 ${
+            inView ? "opacity-100" : "opacity-0"
+          }`}
         >
           <img
             src="11.png"
@@ -35,22 +39,48 @@ const Hero: React.FC = () => {
             Front-End Developer | Machine Learning Enthusiast | Data Enthusiast
           </p>
           <div className="flex justify-center space-x-4 transition-opacity duration-1000 delay-1000">
-            <a href="https://github.com/HanCreation" target="_blank" rel="noopener noreferrer" className="text-[#C6AC8E] hover:text-[#EAE0D5] transition-colors" title="GitHub">
+            <a
+              href="https://github.com/HanCreation"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#C6AC8E] hover:text-[#EAE0D5] transition-colors"
+              title="GitHub"
+            >
               <Github size={24} />
             </a>
-            <a href="https://www.linkedin.com/in/hans-felandio/" target="_blank" rel="noopener noreferrer" className="text-[#C6AC8E] hover:text-[#EAE0D5] transition-colors" title="LinkedIn">
+            <a
+              href="https://www.linkedin.com/in/hans-felandio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#C6AC8E] hover:text-[#EAE0D5] transition-colors"
+              title="LinkedIn"
+            >
               <Linkedin size={24} />
             </a>
-            <a href="https://huggingface.co/LiquAId" target="_blank" rel="noopener noreferrer" className="text-[#C6AC8E] hover:text-[#EAE0D5] transition-colors" title="Hugging Face">
-            <span role="img" aria-label="hugging face" style={{ fontSize: '18px' }}>🤗</span>
+            <a
+              href="https://huggingface.co/LiquAId"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#C6AC8E] hover:text-[#EAE0D5] transition-colors"
+              title="Hugging Face"
+            >
+              <span
+                role="img"
+                aria-label="hugging face"
+                style={{ fontSize: "18px" }}
+              >
+                🤗
+              </span>
             </a>
-            
-            <a href="mailto:hans.dean@yahoo.com" className="text-[#C6AC8E] hover:text-[#EAE0D5] transition-colors" title="Email">
+            <a
+              href="mailto:hans.dean@yahoo.com"
+              className="text-[#C6AC8E] hover:text-[#EAE0D5] transition-colors"
+              title="Email"
+            >
               <Mail size={24} />
             </a>
-            
           </div>
-          <div>
+          <div className="mt-4">
             <a
               href="/ATS-CV-Dean_Hans.pdf"
               download
@@ -61,6 +91,34 @@ const Hero: React.FC = () => {
           </div>
         </div>
       </div>
+      <a className="absolute bottom-8 left-0 right-0 mx-auto flex justify-center animate-fadeInOutDown">
+        <ChevronDown size={48} className="text-[#C6AC8E]" />
+      </a>
+      {/* Animation Styles */}
+      <style>{`
+        @keyframes fadeInOutDown {
+          0% {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          35% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          65% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          100% {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+        }
+
+        .animate-fadeInOutDown {
+          animation: fadeInOutDown 2.2s infinite;
+        }
+      `}</style>
     </Parallax>
   );
 };
